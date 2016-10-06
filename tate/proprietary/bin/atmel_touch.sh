@@ -61,8 +61,7 @@ ATMEL_DRIVER=/system/lib/modules/atmel_mxt_ts.ko
 
 if [ -e $ATMEL_DRIVER ]; then
 	echo "loading atmel touch driver" > /dev/kmsg
-#	insmod $ATMEL_DRIVER
-	setprop atmel.touch_ready 1
+	insmod $ATMEL_DRIVER
 	sleep 1;
 else
 	echo "Atmel touch driver module not found" > /dev/kmsg
